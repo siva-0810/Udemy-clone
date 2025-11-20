@@ -1,182 +1,249 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
-body{
-  font-family: "Gabarito", sans-serif;
+
+body {
+    font-family: "Gabarito", sans-serif;
 }
-.navbar{
+
+.navbar {
+    z-index: 1;
     padding: 10px;
     display: flex;
     justify-content: space-between;
     border-bottom: solid black 1px;
-    gap: 20px;
+    gap: 10px;
     align-items: center;
     background-color: white;
     position: sticky;
     top: 0;
-    
+
 }
-.navbar__s1__title{
+
+.navbar__s1__title {
     color: #a435f0;
 
-}  
-.navbar__s2{
+}
+
+.navbar__s2 {
     padding: 10px;
     border: solid black 1px;
     border-radius: 30px;
-    width: 700px;
+    width: 100%;
     display: flex;
-    gap: 17px;
+    gap: 10px;
     align-items: center;
-    background-color: transparent;
-    
+
+
 }
-.navbar__s2 input{
+
+.navbar__s2 input {
     border: none;
-    width: 700px;
-    font-size: 20px;
+    width: 100%;
+    font-size: 16px;
+    background-color: transparent;
 }
-.navbar__s2 input:focus{
+
+.navbar__s2 input:focus {
     outline: none;
 }
-.navbar__s3{
+
+.navbar__s3 {
     display: flex;
-    gap: 15px;
-     align-items: center;
+    gap: 10px;
+    align-items: center;
+}
+
+.navbar__s4 {
+    display: none;
 }
 
 /**mylearning**/
 
-.mylearning{
+.mylearning {
     position: relative;
     cursor: pointer;
 }
 
-.mylearning__popup{
+.mylearning__popup {
     background-color: burlywood;
     width: 180px;
     position: absolute;
     top: 150%;
     padding: 10px;
-    border:  solid black 1px;
+    border: solid black 1px;
     right: 0;
     display: none;
 }
-.mylearning:hover .mylearning__popup{
+
+.mylearning:hover .mylearning__popup {
     display: block;
 }
-.container{
+
+.container {
     display: flex;
     padding: 10px;
     justify-content: space-around;
     border-bottom: solid black 1px;
 }
-.container p{
+
+.container p {
     background-color: #a435f0;
     color: white;
     padding: 10px;
     border-radius: 30px;
     cursor: pointer;
-    border:solid #a435f0 1px;
+    border: solid #a435f0 1px;
 }
-.container p:hover{
+
+.container p:hover {
     transition: 1s;
     background-color: transparent;
-    color:black;
-    border:solid #a435f0 1px;
+    color: black;
+    border: solid #a435f0 1px;
 }
-.recommended{
+
+.recommended {
     padding: 10px;
 }
-.recommended__container{
+
+.recommended__container {
     flex-wrap: wrap;
     display: flex;
     justify-content: space-between;
     margin-top: 1%;
 
 }
-.course-card{
-    width: 250px;
-   
+
+.course-card {
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin: 5px;
 }
-.course-card img{
+
+.course-card img {
     width: 100%;
-     height: 50%;
+    height: 50%;
 }
-.topics{
+
+.topics {
     padding: 10px;
 }
-.topics__container{
+
+.topics__container {
     display: flex;
     gap: 10px;
     margin-top: 10px;
-     flex-wrap: wrap;
+    flex-wrap: wrap;
 }
-.topics__container p{
+
+.topics__container p {
     border: solid black 1px;
     padding: 10px;
     flex-grow: 1;
-    flex-basis:25% ;
+    flex-basis: 25%;
 }
-.popular{
+
+.popular {
     padding: 10px;
 
 }
-.popular__container{
+
+.popular__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 10px;
-    gap: 70px;
+    gap: 1px;
 }
-.footer{
+
+.footer {
     padding: 30px;
-    background-color:black;
+    background-color: black;
     color: white;
 }
-.footer__one{
+
+.footer__one {
     display: flex;
-   
-         
+
+
 }
-.footer__one p{
+
+.footer__one p {
     margin: 20px;
 
 }
-.footer__two{
+
+.footer__two {
     margin: 20px;
     align-items: center;
     display: flex;
-     justify-content:space-between ;
+    justify-content: space-between;
 
 
 }
-.sale-image{
+
+.sale-image {
     position: relative;
 }
-.sale-image__offer{
+
+.sale-image img {
+    width: 100%;
+}
+
+.sale-image__offer {
     background-color: white;
-    width: 500px;
-    height: 100px;
+    width: 35%;
     position: absolute;
-    top: 150px;
-    left: 150px;
-    padding: 10px;
+    top: 10%;
+    left: 10%;
+    padding: 2%;
     border: solid black 2px;
     animation-name: zoom;
     animation-duration: 2s;
     animation-fill-mode: forwards;
     opacity: 0;
 }
-@keyframes zoom{
-    0%{
+
+@keyframes zoom {
+    0% {
         opacity: 0;
         transform: scale(0);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: scale(1);
     }
+
+}
+
+
+@media screen and (max-width:600px) {
+    body {
+        font-size: 10px;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+    .course-card {
+        flex-basis: 40%
+    }
+
+    .container {
+        display: none;
+    }
+
+    .navbar__s2,
+    .navbar__s3 {
+        display: none;
+    }
+
+    .navbar__s4 {
+        display: block;
+    }
+
 
 }
